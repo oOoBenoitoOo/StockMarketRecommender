@@ -10,7 +10,7 @@ I choosed the option to store the algorithms functions in the backend. So you wi
 
 I didn't cover all the application with the unit tests. E2E testing are not implemented.
 
-Improvevement
+Improvevement:
 - GenericErroHandler - build a toast service to display the error messages.
 - Http loading part (service already there) - build the loader. 
 - Refactoring.
