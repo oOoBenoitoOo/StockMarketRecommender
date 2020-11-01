@@ -1,0 +1,74 @@
+@import '../../../../../assets/scss/variables.scss';
+@import '../../../../../assets/scss/base.scss';
+@import '../../../../../assets/scss/mixins.scss';
+
+* {
+    box-sizing: border-box;
+  }
+.wrapper{
+    @include border-radius(10px);
+    border: 1px solid #cacaca;
+    padding-bottom: 25px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 5px #888888;
+    form{
+        margin-top: 25px;
+        p{
+            color: #000;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 30px;
+            .flex-item {
+                border-radius: 15px;
+                margin: 5px;
+                padding: 10px;
+                flex: 30%;
+                label{
+                    font-size: 15px;
+                    font-family: $font-family;
+                    color: #3a3a3a;
+                }
+                p{
+                    margin: 0;
+                    font-size: 16px;
+                }
+                input, select, textarea{
+                    @include form-control();
+                    width: 100%;
+                }
+                textarea{
+                    height: 100px;
+                    &:disabled{
+                        background: #e2e2e2;
+                    }
+                }
+                .error {
+                    margin-top: -10px;
+                    .error-message{
+                        font-size: 12px;
+                        color: red;
+                    }
+                }
+                div{
+                    .date{
+                        width: 45%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    .wrapper{
+        form{
+            .flex-container {
+                .flex-item {
+                    flex: 100%;
+                }
+            }
+        }
+    }
+}
+

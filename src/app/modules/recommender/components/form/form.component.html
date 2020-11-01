@@ -1,0 +1,65 @@
+<div class="wrapper">
+    <form [formGroup]="recommenderForm">
+        <div class="flex-container">
+            <div class="flex-item">
+                <label>1 - Enter the symbol:</label>
+                <input type="text" placeholder="Symbol..." formControlName="symbol">
+                <div *ngIf="symbol.invalid && (symbol.dirty || symbol.touched)" class="error">
+                    <span *ngIf="symbol.errors.required" class="error-message">
+                        Fill a symbol.
+                    </span>
+                </div>
+            </div>
+            <div class="flex-item">
+                <label>2 - Choose a social network:</label>
+                <select formControlName="socialNetwork">
+                    <option [ngValue]="''" disabled>Social network...</option>
+                    <option *ngFor="let item of socialNetwork$ | async; let i = index" [ngValue]="item">
+                        {{item.name}}
+                    </option>
+                </select>
+                <div *ngIf="socialNetwork.invalid && (socialNetwork.dirty || socialNetwork.touched)" class="error">
+                    <span *ngIf="socialNetwork.errors.required" class="error-message">
+                        Inquire a social network.
+                    </span>
+                </div>
+            </div>
+            <div class="flex-item">
+                <label>3 - Enter dates:</label>
+                <div>
+                    <input class="date" type="date" formControlName="startDate">
+                    <label> to </label>
+                    <input class="date" type="date" formControlName="endDate" />
+                </div>
+                <div *ngIf="startDate.invalid && (startDate.dirty || startDate.touched) || endDate.invalid && (endDate.dirty || endDate.touched)" class="error">
+                    <span *ngIf="startDate.errors.required || endDate.errors.required" class="error-message">
+                        Dates are required.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="flex-container">
+            <div class="flex-item">
+                <label>4 - Which algorithm you want to use:</label>
+                <select formControlName="algorithm">
+                    <option [ngValue]="''" disabled>Choose your algorithm...</option>
+                    <option *ngFor="let item of algorithms$ | async" [ngValue]="item">{{item.name}}</option>
+                </select>
+                <div *ngIf="algorithm.invalid && (algorithm.dirty || algorithm.touched)" class="error">
+                    <span *ngIf="algorithm.errors.required" class="error-message">
+                        Choose an algorithm.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="flex-item">
+                <label>Description of the selected algorithm:</label>
+                <textarea disabled>{{algorithm.value.description}}</textarea>
+            </div>
+        </div>
+        <hr>
+        <button class="btn-red" (click)="submitEvent()">Calculate</button>
+    </form>
+</div>

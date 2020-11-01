@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <h3 class="text-center ft-400">Estimate</h3>
+    <div>
+        <p><label>Symbol: </label> {{ symbol }} <span class="ft-r"><label>Total posts found :</label> {{countPosts}} </span></p>
+        <p><label>Range date: </label> {{ startDate + ' - ' + endDate }} </p>
+        <p><label>Social network: </label> {{ socialNetwork }} <span class="ft-r"><label>Try another algorithm:</label></span></p>
+        <p>
+            <label>Algorithm: </label> {{ algorithm }} 
+            <select [(ngModel)]="selectedAlgorithm" (change)="reloadCalculation()">
+                <option *ngFor="let item of algorithms$ | async" [ngValue]="item">{{item.name}}</option>
+            </select>
+        </p>
+    </div>
+    <table>
+        <tr>
+            <th class="bg-red">Date</th>
+            <td *ngFor="let item of recommendations">{{item.date | date: 'MM-dd-yyyy'}}</td>
+         </tr>
+        <tr>
+            <th class="bg-red">Price</th>
+            <td *ngFor="let item of recommendations">{{item.price}}</td>
+        </tr>
+        <tr>
+            <th class="bg-red">Count posts</th>
+            <td *ngFor="let item of recommendations">{{item.countPosts}}</td>
+        </tr>
+        <tr>
+            <th class="bg-green">Recommendation</th>
+            <td *ngFor="let item of recommendations">{{item.recommendation}}</td>
+        </tr>
+    </table>
+    <app-posts [socialNetwork]="socialNetwork" ></app-posts>
+    <p class="text-center back" [routerLink]="['/']">click here to return to the form.</p>
+</div>

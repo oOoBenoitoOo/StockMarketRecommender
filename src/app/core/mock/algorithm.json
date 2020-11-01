@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Recommendation algorithm 1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et rhoncus metus. Maecenas sed diam mauris. Sed elementum egestas interdum. Sed dictum porta massa, aliquam ullamcorper risus elementum eget. Praesent quis quam nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et rhoncus metus. Maecenas sed diam mauris. Sed elementum egestas interdum. Sed dictum porta massa, aliquam ullamcorper risus elementum eget. Praesent quis quam nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et rhoncus metus. Maecenas sed diam mauris. Sed elementum egestas interdum. Sed dictum porta massa, aliquam ullamcorper risus elementum eget. Praesent quis quam nisi.",
+        "algorithmFn": "['Sell','Buy','Hold'][Math.floor(Math.random() * 3)]"
+    },
+    {
+        "id": 2,
+        "name": "Recommendation algorithm 2",
+        "description": "Nullam quis velit viverra elit pharetra aliquam in sed magna. Aenean porta mi id erat ullamcorper suscipit. Nullam quis velit viverra elit pharetra aliquam in sed magna. Aenean porta mi id erat ullamcorper suscipit. Nullam quis velit viverra elit pharetra aliquam in sed magna. Aenean porta mi id erat ullamcorper suscipit.",
+        "algorithmFn": "['Sell','Buy','Hold'][Math.floor(Math.random() * 3)]"
+    },
+    {
+        "id": 3,
+        "name": "Recommendation algorithm 3",
+        "description": "Maecenas ultrices congue tellus, id efficitur magna consectetur sed. Proin augue ante, ultrices porta auctor a, tincidunt dapibus mi. Praesent mollis tortor at nisl interdum tincidunt.Maecenas ultrices congue tellus, id efficitur magna consectetur sed. Proin augue ante, ultrices porta auctor a, tincidunt dapibus mi. Praesent mollis tortor at nisl interdum tincidunt.",
+        "algorithmFn": "['Sell','Buy','Hold'][Math.floor(Math.random() * 3)]"
+    },
+    {
+        "id": 4,
+        "name": "Recommendation algorithm 4",
+        "description": "Donec vestibulum sagittis ipsum eleifend tincidunt. Maecenas feugiat rhoncus ipsum a lobortis. Maecenas egestas diam augue, feugiat lacinia nunc malesuada sagittis. Donec vestibulum sagittis ipsum eleifend tincidunt. Maecenas feugiat rhoncus ipsum a lobortis. Maecenas egestas diam augue, feugiat lacinia nunc malesuada sagittis. Donec vestibulum sagittis ipsum eleifend tincidunt. Maecenas feugiat rhoncus ipsum a lobortis. Maecenas egestas diam augue, feugiat lacinia nunc malesuada sagittis.",
+        "algorithmFn": "['Sell','Buy','Hold'][Math.floor(Math.random() * 3)]"
+    }
+]

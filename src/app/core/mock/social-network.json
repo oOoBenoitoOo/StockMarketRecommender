@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "LinkedIn"
+    },
+    {
+        "id": 2,
+        "name": "Facebook"
+    },
+    {
+        "id": 3,
+        "name": "Twitter"
+    },
+    {
+        "id": 4,
+        "name": "Instagram"
+    },
+    {
+        "id": 5,
+        "name": "Pinterest"
+    },
+    {
+        "id": 6,
+        "name": "Meetup"
+    }
+   ]

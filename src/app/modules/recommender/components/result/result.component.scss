@@ -1,0 +1,64 @@
+@import '../../../../../assets/scss/variables.scss';
+@import '../../../../../assets/scss/base.scss';
+@import '../../../../../assets/scss/mixins.scss';
+
+.wrapper{
+    @include border-radius(10px);
+    font-family: $font-family;
+    border: 1px solid #cacaca;
+    padding-bottom: 25px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 5px #888888;
+    overflow-y: auto;
+    color: #464040;
+    h3 { color: $grey;}
+    p{
+        select { 
+            @include form-control();
+            width: 50%; 
+            float: right;
+            margin-top: -15px;
+        }
+    }
+    div{
+        padding-left: 20px;
+        padding-right: 20px;
+        label{
+            color: #797979;
+        }
+    }
+    table{
+        border-collapse: collapse;
+        width: 99%;
+        margin: 5px;
+        tr,td{
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th{
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 10px;
+            text-align: left;
+            color: white;
+            font-weight: 100;
+        }
+    }
+    .back{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 800px) {
+    .wrapper{
+        p{
+            select { 
+                width: 100%; 
+                float: none;
+                margin-top: 0;
+            }
+        }
+    }
+}
