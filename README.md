@@ -1,6 +1,23 @@
-# GetRich
+# Stock Market Recommender
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+
+## Remarks - Benoit
+
+For switching between the mock and the backend, just remove the HTTP_INTERCEPTORS injection line for the providers in the file recommender.module.ts.
+
+I choosed the option to store the algorithms functions in the backend. So you will find them(dumb functions) in the mock part.
+
+I didn't cover all the application with the unit tests. E2E testing are not implemented.
+
+Improvevement
+- GenericErroHandler - build a toast service to display the error messages.
+- Http loading part (service already there) - build the loader. 
+- Refactoring.
+- Find a designer :-)
+- Responsive part is already there but need some improvement on the result part.
+
+Thanks for the review.
 
 ## Development server
 
