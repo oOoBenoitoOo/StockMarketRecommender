@@ -69,6 +69,7 @@ export class ResultComponent implements OnInit, OnDestroy {
   }
 
   reloadCalculation(): void {
+    this.formValue.get('algorithm').setValue(this.selectedAlgorithm);
     this.recommendations.forEach(item => {
         item.recommendation = RecommendationKeys[window.eval(this.selectedAlgorithm.algorithmFn)];
     });
